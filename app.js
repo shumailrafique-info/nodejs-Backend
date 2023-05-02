@@ -26,7 +26,7 @@ app.use(
 );
 
 app.get("/", (req, res) => {
-  res.send("Welcome to Shumail Smashwer");
+  res.send("Welcome to Shumail Todo App");
 });
 
 //Error MiddleWare
