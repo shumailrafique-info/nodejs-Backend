@@ -22,7 +22,6 @@ const login = async (req, res, next) => {
 //Register User to DataBase
 const register = async (req, res, next) => {
   const { name, email, password } = req.body;
-
   //finding user in Database
   let user = await User.findOne({ email });
 
@@ -52,7 +51,7 @@ const getMyProfile = async (req, res, next) => {
 //Destroy token and logout
 const logout = async (req, res) => {
   res
-    .status(404)
+    .status(200)
     .cookie("token", "", {
       expires: new Date(Date.now()),
       sameSite: process.env.NODE_ENV === "Development" ? "lax" : "none",
